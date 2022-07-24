@@ -2,9 +2,13 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
 :root {
     --dark-grey: #1e2328;
-    --light-grey: #3b3f46;
-    --yellow: #3b3f46;
-    --yellow-shade: #fed053;
+    --grey: #3b3f46;
+    --light-grey: #888;
+    --yellow: #ffb81c;
+    --yellow-shade-1: #ffe81c;
+    --yellow-shade-2: #ffd069;
+    --black: #000;
+    --white: #fff;
 }
 
 * {
@@ -13,9 +17,14 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
+
 html, body {
     height: 100%;
-    background: linear-gradient(to right,#E7E7E7,white,#E7E7E7);
+    background: var(--black);  /* linear-gradient(to right,#E7E7E7,white,#E7E7E7); */
 }
 
 .container {
@@ -39,31 +48,31 @@ html, body {
 }
 
 .word1, .word2 {
-    color: #9BC5DE;
+    color: var(--yellow);
 }
 
 .word3, .word4 {
-    color: #90B3C9;
+    color: var(--yellow-shade-1);
 }
 
 .word5, .word6 {
-    color: #809BB0;
+    color: var(--yellow-shade-2);
 }
 
 .word7 {
-    color: #6B7B8A;
+    color: var(--light-grey);
 }
 
 .word8, .word9 {
-    color: #8B8091;
+    color: var(--grey);
 }
 
 .word10, .word11 {
-    color: #B68FA2;
+    color: var(--dark-grey);
 }
 
 .word12, .word13 {
-    color: #D99AB5;
+    color: var(--white);
 }
 
 .word1 {
@@ -118,8 +127,8 @@ html, body {
     height: 75px;
     width: 75px;
     position: absolute;
-    color: white;
-    background-color: #99C5DE;
+    color: black;
+    background-color: var(--yellow);
     font-family: "Open Sans Condensed", serif;
     border-radius: 0 20px 0 20px;
     top: 0;
@@ -134,8 +143,8 @@ html, body {
     width: 0;
     height: 0;
     border-left: 12px solid transparent;
-    border-right: 0 solid #99C5DE;
-    border-bottom: 12px solid #99C5DE;
+    border-right: 0 solid var(--yellow);
+    border-bottom: 12px solid var(--yellow);;
     position: absolute;
     top: 63px;
     left: 75px;
@@ -147,12 +156,12 @@ html, body {
     width: 220px;
     padding: 20px;
     position: absolute;
-    color: white;
-    background-color: #99C5DE;
+    color: black;
+    background-color: var(--yellow);
     font-family: "Open Sans Condensed", serif;
     border-radius: 30px 0 30px 0;
     left: 100%;
-    top: 20px;
+    top: 1px;
     font-size: 40px;
     font-weight: bold;
     letter-spacing: 5px;
@@ -163,19 +172,11 @@ html, body {
     width: 0;
     height: 0;
     border-left: 20px solid transparent;
-    border-right: 0 solid #99C5DE;
-    border-bottom: 20px solid #99C5DE;
+    border-right: 0 solid var(--yellow);;
+    border-bottom: 20px solid var(--yellow);;
     position: absolute;
     top: 130px;
     left: -19px;
-}
-
-.bubble2 img {
-    border-radius: 20px 0 20px 0;
-    background: white;
-    display: block;
-    width: 100%;
-    height: 100%;
 }
 
 .bubble3 {
@@ -183,9 +184,10 @@ html, body {
     width: 250px;
     padding: 20px;
     position: absolute;
-    color: white;
-    background-color: #90B2CB;
+    color: black;
+    background-color: var(--yellow-shade-1);
     font-family: "Open Sans Condensed", serif;
+    font-size: 20px;
     border-radius: 30px 0 30px 0;
     top: 183px;
     left: -280px;
@@ -196,8 +198,8 @@ html, body {
     width: 0;
     height: 0;
     border-left: 20px solid transparent;
-    border-right: 0 solid #90B2CB;
-    border-bottom: 20px solid #90B2CB;
+    border-right: 0 solid var(--yellow-shade-1);
+    border-bottom: 20px solid var(--yellow-shade-1);
     position: absolute;
     top: 0;
     left: 250px;
@@ -209,11 +211,11 @@ html, body {
     width: 250px;
     padding: 20px;
     position: absolute;
-    color: white;
-    background-color: #809BAE;
+    color: black;
+    background-color: var(--yellow-shade-2);
     font-family: "Open Sans Condensed", serif;
     border-radius: 30px 0 30px 0;
-    top: 260px;
+    top: 240px;
     left: 280px;
 }
 
@@ -222,8 +224,8 @@ html, body {
     width: 0;
     height: 0;
     border-left: 20px solid transparent;
-    border-right: 0 solid #809BAE;
-    border-bottom: 20px solid #809BAE;
+    border-right: 0 solid var(--yellow-shade-2);
+    border-bottom: 20px solid var(--yellow-shade-2);
     position: absolute;
     top: 160px;
     left: -19px;
@@ -234,8 +236,8 @@ html, body {
     width: 250px;
     padding: 20px;
     position: absolute;
-    color: white;
-    background-color: #697A8A;
+    color: black;
+    background-color: var(--light-grey);
     font-family: "Open Sans Condensed", serif;
     border-radius: 30px 0 30px 0;
     top: 450px;
@@ -247,8 +249,8 @@ html, body {
     width: 0;
     height: 0;
     border-left: 20px solid transparent;
-    border-right: 0 solid #697A8A;
-    border-bottom: 20px solid #697A8A;
+    border-right: 0 solid var(--light-grey);
+    border-bottom: 20px solid var(--light-grey);
     position: absolute;
     top: 0;
     left: 250px;
@@ -256,15 +258,15 @@ html, body {
 }
 
 .bubble6 {
-    height: 180px;
+    height: 250px;
     width: 250px;
     padding: 20px;
     position: absolute;
     color: white;
-    background-color: #8B8091;
+    background-color: var(--grey);
     font-family: "Open Sans Condensed", serif;
     border-radius: 0 30px 0 30px;
-    top: 509px;
+    top: 510px;
     left: 280px;
     line-height: 1.8;
 }
@@ -274,8 +276,8 @@ html, body {
     width: 0;
     height: 0;
     border-left: 20px solid transparent;
-    border-right: 0 solid #8B8091;
-    border-bottom: 20px solid #8B8091;
+    border-right: 0 solid var(--grey);
+    border-bottom: 20px solid var(--grey);
     position: absolute;
     top: 0;
     left: -19px;
@@ -283,15 +285,15 @@ html, body {
 }
 
 .bubble7 {
-    height: 200px;
+    height: 300px;
     width: 250px;
     padding: 20px;
     position: absolute;
     color: white;
-    background-color: #B68EA6;
+    background-color: var(--dark-grey);
     font-family: "Open Sans Condensed", serif;
     border-radius: 30px 0 30px 0;
-    top: 675px;
+    top: 710px;
     left: -280px;
 }
 
@@ -300,8 +302,8 @@ html, body {
     width: 0;
     height: 0;
     border-left: 20px solid transparent;
-    border-right: 0 solid #B68EA6;
-    border-bottom: 20px solid #B68EA6;
+    border-right: 0 solid var(--dark-grey);
+    border-bottom: 20px solid var(--dark-grey);
     position: absolute;
     top: 0;
     left: 250px;
@@ -310,14 +312,15 @@ html, body {
 
 .bubble8 {
     height: 180px;
-    width: 250px;
+    width: 300px;
     padding: 20px;
     position: absolute;
-    color: white;
-    background-color: #D99AB5;
+    color: black;
+    background-color: var(--white);
     font-family: "Open Sans Condensed", serif;
+    font-size: 20px;
     border-radius: 30px 0 30px 0;
-    top: 853px;
+    top: 890px;
     left: 280px;
 }
 
@@ -326,8 +329,8 @@ html, body {
     width: 0;
     height: 0;
     border-left: 20px solid transparent;
-    border-right: 0 solid #D99AB5;
-    border-bottom: 20px solid #D99AB5;
+    border-right: 0 solid var(--white);
+    border-bottom: 20px solid var(--white);
     position: absolute;
     top: 160px;
     left: -19px;
